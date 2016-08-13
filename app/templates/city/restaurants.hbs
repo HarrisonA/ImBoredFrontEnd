@@ -1,0 +1,6 @@
+{{#link-to 'city'}}Back to the {{model.name}} activities list{{/link-to}}
+<h1>Restaurants in {{model.name}}!!!</h1>
+
+{{#each model.restaurants as |restaurant|}}
+  {{activities-list activity=restaurant}}
+{{/each}}

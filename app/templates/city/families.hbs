@@ -1,0 +1,6 @@
+{{#link-to 'city'}}Back to the {{model.name}} activities list{{/link-to}}
+<h1>Family in {{model.name}}!!!</h1>
+
+{{#each model.families as |family|}}
+  {{family-list activity=family}}
+{{/each}}

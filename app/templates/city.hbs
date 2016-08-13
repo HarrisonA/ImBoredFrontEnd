@@ -4,10 +4,12 @@
 <h2>THINGS TO DO in the city of {{model.name}}</h2>
 
 <div>
-  <h2>Bars ({{model.bars.length}} recommendations):</h2>
-    {{#each model.bars as |bar|}}
-      {{activities-list activity=bar}}
-    {{/each}}
+  <h2>{{#link-to 'city.bars'}}Bars ({{model.bars.length}} recommendations)
+    <br>
+    <!-- TODO: Change this to a static resource  -->
+    <img src="http://cdn.funcheap.com/wp-content/uploads/2016/02/minna3-680x3981.jpg" alt="bar" style="height:300px; width:300px"/>
+    {{/link-to}}
+  </h2>
 </div>
 <button>{{#link-to 'city.bar.new'}}Add bar {{/link-to}}</button>
 (ADMIN ONLY not working yet
