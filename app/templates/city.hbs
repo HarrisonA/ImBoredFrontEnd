@@ -1,5 +1,11 @@
 {{#link-to 'cities'}}Back to the Cities list{{/link-to}}
 
+<!-- A very quick hack to check display issues: -->
+<style media="screen">
+  div { display: inline-block;}
+</style>
+
+
 
 <h2>THINGS TO DO in the city of {{model.name}}</h2>
 
@@ -10,20 +16,24 @@
     <img src="http://cdn.funcheap.com/wp-content/uploads/2016/02/minna3-680x3981.jpg" alt="bar" style="height:300px; width:300px"/>
     {{/link-to}}
   </h2>
+  <!-- (ADMIN ONLY not working yet
+  USERs wiil be able to add their own private bars too) -->
+  <button>{{#link-to 'city.bar.new'}}Add bar {{/link-to}}</button>
 </div>
-<button>{{#link-to 'city.bar.new'}}Add bar {{/link-to}}</button>
-(ADMIN ONLY not working yet
-USERs wiil be able to add their own private bars too)
+
+
 
 
 <div>
-  <h2>Movies ({{model.movies.length}} recommendations):</h2>
-  {{#each model.movies as |movie|}}
-    {{activities-list activity=movie}}
-  {{/each}}
+  <h2>{{#link-to 'city.movies'}}Movies ({{model.movies.length}} recommendations)
+    <br>
+    <!-- TODO: Change this to a static resource  -->
+    <img src="http://www.tpevent.com/wp-content/uploads/2015/09/minions-in-movie-theatre.jpg" alt="movie" style="height:300px; width:300px"/>
+    {{/link-to}}
+  </h2>
+  <button>{{#link-to 'city.movie.new'}}Add movie {{/link-to}}</button>(not working yet)
 </div>
 
-<button>{{#link-to 'city.movie.new'}}Add movie {{/link-to}}</button>(not working yet)
 
 
 
@@ -34,26 +44,54 @@ USERs wiil be able to add their own private bars too)
     <img src="http://wobo.org/wp-content/uploads/2014/09/Zach-photo-at-amphitheater.jpg" alt="park" style="height:300px; width:300px"/>
     {{/link-to}}
   </h2>
+  <button>{{#link-to 'city.park.new'}}Add park {{/link-to}}</button>(not working yet)
 </div>
 
-<button>{{#link-to 'city.park.new'}}Add park {{/link-to}}</button>(not working yet)
 
 
 <div>
-  <h2>Travel ({{model.travels.length}} recommendations):</h2>
-  {{#each model.travels as |travel|}}
-    {{activities-list activity=travel}}
-  {{/each}}
+  <h2>{{#link-to 'city.travels'}}Travels ({{model.travels.length}} recommendations)
+    <br>
+    <!-- TODO: Change this to a static resource  -->
+    <img src="http://img.wallpaperfolder.com/f/52F6566CDDC7/beach-resort-tropical.jpg" alt="park" style="height:300px; width:300px"/>
+    {{/link-to}}
+  </h2>
+  <button>{{#link-to 'city.travel.new'}}Add travel {{/link-to}}</button>(not working yet)
 </div>
 
-<button>{{#link-to 'city.travel.new'}}Add travel {{/link-to}}</button>(not working yet)
 
 
 <div>
-  <h2>Family ({{model.famlies.length}} recommendations):</h2>
-  {{#each model.families as |family|}}
-    {{family-list activity=family}}
-  {{/each}}
+  <h2>{{#link-to 'city.sports'}}Families ({{model.sports.length}} recommendations)
+    <br>
+    <!-- TODO: Change this to a static resource  -->
+    <img src="http://jockeybeingfamily.com/wp-content/uploads/2015/05/jbf-homepage-bottom-family.jpg" alt="park" style="height:300px; width:300px"/>
+    {{/link-to}}
+  </h2>
+  <button>{{#link-to 'city.family.new'}}Add family {{/link-to}}</button>(not working yet)
 </div>
 
-<button>{{#link-to 'city.family.new'}}Add family {{/link-to}}</button>(not working yet)
+
+
+<div>
+  <h2>{{#link-to 'city.sports'}}Sports ({{model.sports.length}} recommendations)
+    <br>
+    <!-- TODO: Change this to a static resource  -->
+    <img src="http://i.cdn.turner.com/nba/nba/dam/assets/160215001056-russell-westbrook-2016-nba-all-star-game.1200x672.jpeg" alt="park" style="height:300px; width:300px"/>
+    {{/link-to}}
+  </h2>
+  <button>{{#link-to 'city.sport.new'}}Add sport {{/link-to}}</button>(not working yet)
+</div>
+
+
+
+
+<div>
+  <h2>{{#link-to 'city.restaurants'}}Restaurants ({{model.restaurants.length}} recommendations)
+    <br>
+    <!-- TODO: Change this to a static resource  -->
+    <img src="https://s-media-cache-ak0.pinimg.com/564x/bf/4f/33/bf4f3315634734a1c7cd345f988d5803.jpg" alt="park" style="height:300px; width:300px"/>
+    {{/link-to}}
+  </h2>
+  <button>{{#link-to 'city.restaurant.new'}}Add restaurant {{/link-to}}</button>(not working yet)
+</div>

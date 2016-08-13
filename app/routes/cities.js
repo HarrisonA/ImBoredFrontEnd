@@ -1,3 +1,5 @@
+// NOTE: This file is connected to the route for cities
+
 import Ember from 'ember';
 
 export default Ember.Route.extend({
