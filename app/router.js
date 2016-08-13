@@ -16,7 +16,8 @@ Router.map(function () {
   this.route('travels');
 
   this.route('city', { path: 'cities/:city_id' }, function () {
-
+    // this.route('parklist', { path: 'parks' });
+    this.route('parks');
     this.route('park.new', { path: 'parks/new' });
 
     this.route('family.new', { path: 'families/new' });

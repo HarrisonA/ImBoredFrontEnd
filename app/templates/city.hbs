@@ -1,29 +1,52 @@
 {{#link-to 'cities'}}Back to the Cities list{{/link-to}}
+
+
 <h2>City of {{model.name}}</h2>
+
 <div>
   <h2>Bars( {{model.bars.length}} ):</h2>
-  {{#each model.bars as |bar|}}
-    <div>
-      <strong>{{bar.name}}</strong>
-      <p>{{bar.url}}</p>
-      <p>{{bar.photo}} so it's currenty hardcoded below</p>
-      <img src="http://halftimesportbar.letseat.at/system/business_logos/14767/original/c223c99ba1107aa04208.jpg?1349977399">
-      <!-- <button {{action 'deleteComment' comment}}>Delete Comment</button> -->
-    </div>
-  {{/each}}
+    {{#each model.bars as |bar|}}
+      {{activities-list activity=bar}}
+    {{/each}}
 </div>
+<button>{{#link-to 'city.bar.new'}}Add bar {{/link-to}}</button>
+(ADMIN ONLY not working yet
+USERs wiil be able to add their own private bars too)
+
 
 <div>
   <h2>Movies( {{model.movies.length}} ):</h2>
   {{#each model.movies as |movie|}}
-    <div>
-      <strong>{{movie.name}}</strong>
-      <p>{{movie.url}}</p>
-      <p>{{movie.photo}}</p>
-
-      <!-- <button {{action 'deleteComment' comment}}>Delete Comment</button> -->
-    </div>
+    {{activities-list activity=movie}}
   {{/each}}
 </div>
 
-<div>{{#link-to 'city.movie.new'}}Add movie (not working yet){{/link-to}}</div>
+<button>{{#link-to 'city.movie.new'}}Add movie {{/link-to}}</button>(not working yet)
+
+
+
+<div>
+  <h2>{{#link-to 'city.parks'}}Parks( {{model.parks.length}} ):{{/link-to}}</h2>
+</div>
+
+<button>{{#link-to 'city.park.new'}}Add park {{/link-to}}</button>(not working yet)
+
+
+<div>
+  <h2>Travel( {{model.travels.length}} ):</h2>
+  {{#each model.travels as |travel|}}
+    {{activities-list activity=travel}}
+  {{/each}}
+</div>
+
+<button>{{#link-to 'city.travel.new'}}Add travel {{/link-to}}</button>(not working yet)
+
+
+<div>
+  <h2>Family( {{model.famlies.length}} ):</h2>
+  {{#each model.families as |family|}}
+    {{family-list activity=family}}
+  {{/each}}
+</div>
+
+<button>{{#link-to 'city.family.new'}}Add family {{/link-to}}</button>(not working yet)
