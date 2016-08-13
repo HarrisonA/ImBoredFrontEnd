@@ -1,16 +1,29 @@
 {{#link-to 'cities'}}Back to the Cities list{{/link-to}}
-<h3>City Show</h3>
-<h2>{{model.name}}</h2>
+<h2>City of {{model.name}}</h2>
 <div>
-  <strong>Bars( {{model.bars.length}} ):</strong>
+  <h2>Bars( {{model.bars.length}} ):</h2>
   {{#each model.bars as |bar|}}
     <div>
       <strong>{{bar.name}}</strong>
       <p>{{bar.url}}</p>
+      <p>{{bar.photo}} so it's currenty hardcoded below</p>
+      <img src="http://halftimesportbar.letseat.at/system/business_logos/14767/original/c223c99ba1107aa04208.jpg?1349977399">
       <!-- <button {{action 'deleteComment' comment}}>Delete Comment</button> -->
     </div>
   {{/each}}
 </div>
 
+<div>
+  <h2>Movies( {{model.movies.length}} ):</h2>
+  {{#each model.movies as |movie|}}
+    <div>
+      <strong>{{movie.name}}</strong>
+      <p>{{movie.url}}</p>
+      <p>{{movie.photo}}</p>
 
-<div>{{#link-to 'city.bar.new'}}Add bar (not working yet){{/link-to}}</div>
+      <!-- <button {{action 'deleteComment' comment}}>Delete Comment</button> -->
+    </div>
+  {{/each}}
+</div>
+
+<div>{{#link-to 'city.movie.new'}}Add movie (not working yet){{/link-to}}</div>
