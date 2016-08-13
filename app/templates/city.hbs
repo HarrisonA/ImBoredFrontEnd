@@ -1,10 +1,10 @@
 {{#link-to 'cities'}}Back to the Cities list{{/link-to}}
 
 
-<h2>City of {{model.name}}</h2>
+<h2>THINGS TO DO in the city of {{model.name}}</h2>
 
 <div>
-  <h2>Bars( {{model.bars.length}} ):</h2>
+  <h2>Bars ({{model.bars.length}} recommendations):</h2>
     {{#each model.bars as |bar|}}
       {{activities-list activity=bar}}
     {{/each}}
@@ -15,7 +15,7 @@ USERs wiil be able to add their own private bars too)
 
 
 <div>
-  <h2>Movies( {{model.movies.length}} ):</h2>
+  <h2>Movies ({{model.movies.length}} recommendations):</h2>
   {{#each model.movies as |movie|}}
     {{activities-list activity=movie}}
   {{/each}}
@@ -26,14 +26,19 @@ USERs wiil be able to add their own private bars too)
 
 
 <div>
-  <h2>{{#link-to 'city.parks'}}Parks( {{model.parks.length}} ):{{/link-to}}</h2>
+  <h2>{{#link-to 'city.parks'}}Parks ({{model.parks.length}} recommendations)
+    <br>
+    <!-- TODO: Change this to a static resource  -->
+    <img src="http://wobo.org/wp-content/uploads/2014/09/Zach-photo-at-amphitheater.jpg" alt="park" style="height:300px; width:300px"/>
+    {{/link-to}}
+  </h2>
 </div>
 
 <button>{{#link-to 'city.park.new'}}Add park {{/link-to}}</button>(not working yet)
 
 
 <div>
-  <h2>Travel( {{model.travels.length}} ):</h2>
+  <h2>Travel ({{model.travels.length}} recommendations):</h2>
   {{#each model.travels as |travel|}}
     {{activities-list activity=travel}}
   {{/each}}
@@ -43,7 +48,7 @@ USERs wiil be able to add their own private bars too)
 
 
 <div>
-  <h2>Family( {{model.famlies.length}} ):</h2>
+  <h2>Family ({{model.famlies.length}} recommendations):</h2>
   {{#each model.families as |family|}}
     {{family-list activity=family}}
   {{/each}}

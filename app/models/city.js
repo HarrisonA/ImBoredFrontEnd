@@ -11,4 +11,5 @@ export default DS.Model.extend({
   travels: DS.hasMany('travel', { async: true }),
 });
 
-// Note: …when async is true, it will fetch the related entities when you actually request them…
+// Note: …when async is true, it will fetch the related entities when you
+// actually request them… currently not using the async benefits

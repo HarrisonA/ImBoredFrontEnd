@@ -10,3 +10,6 @@ export default Ember.Route.extend({
     this.render('city.parks', { into: 'application' });
   },
 });
+
+// renderTemplate is needed to show the tempate of this child route
+// without it, the parent route would still show for this URL
