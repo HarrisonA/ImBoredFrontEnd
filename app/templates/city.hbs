@@ -1,1 +1,16 @@
-{{outlet}}
+{{#link-to 'cities'}}Back to the Cities list{{/link-to}}
+<h3>City Show</h3>
+<h2>{{model.name}}</h2>
+<div>
+  <strong>Bars( {{model.bars.length}} ):</strong>
+  {{#each model.bars as |bar|}}
+    <div>
+      <strong>{{bar.name}}</strong>
+      <p>{{bar.url}}</p>
+      <!-- <button {{action 'deleteComment' comment}}>Delete Comment</button> -->
+    </div>
+  {{/each}}
+</div>
+
+
+<div>{{#link-to 'city.bar.new'}}Add bar (not working yet){{/link-to}}</div>
