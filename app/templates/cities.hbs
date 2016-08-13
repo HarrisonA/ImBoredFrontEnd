@@ -1,12 +1,14 @@
 <h1>List of cities</h1>
 
 <ul>
+  {{#link-to 'random'}}Feeling lucky? Try a random suggestion{{/link-to}} 
   {{#each model as |city|}}
     <li>
       {{#link-to 'city' city}}  <!-- each city is just the model or id. 'city' is the route name-->
         {{city.name}}
       {{/link-to}}
-      
+
     </li>
   {{/each}}
+
 </ul>

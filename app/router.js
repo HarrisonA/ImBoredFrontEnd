@@ -38,6 +38,7 @@ Router.map(function () {
     this.route('travels');
     this.route('travel.new', { path: 'travels/new' });
   });
+  this.route('random');
 });
 
 export default Router;

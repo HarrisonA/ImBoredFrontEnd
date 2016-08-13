@@ -1,0 +1,18 @@
+{{#link-to 'cities'}}Back to the Cities list{{/link-to}}
+
+<h1>
+  Random suggestions coming soon...
+</h1>
+
+Click a city...
+
+<!-- Use a component as some logic to make a city click randomly dispay an activity
+for that city -->
+<ul>
+  {{#each model as |city|}}
+    <li>
+        {{activity-randomizer city=city}}
+    </li>
+  {{/each}}
+
+</ul>
