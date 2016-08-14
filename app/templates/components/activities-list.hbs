@@ -1,6 +1,19 @@
 <div>
   <strong>{{activity.name}}</strong>
-  <p>{{activity.url}}</p>
-  <p>{{activity.photo}} </p>
-  <!-- <img src="http://halftimesportbar.letseat.at/system/business_logos/14767/original/c223c99ba1107aa04208.jpg?1349977399"> -->
+  <br>
+  <a href={{activity.url}}>{{activity.url}}</a>
+  <br>
+  <img src={{activity.photo}} alt="photo missing" style="height:300px; width:300px">
+  <p>
+    About: {{activity.description}}
+  </p>
+  <p>
+    Why? {{activity.why}}
+  </p>
+  <p>
+    Visits: {{activity.numofvisits}}
+  </p>
+  <p>
+    Notes: {{activity.notes}}
+  </p>
 </div>
