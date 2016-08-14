@@ -1,1 +1,32 @@
-{{outlet}}
+<form>
+  <div>
+    <label>Name:</label>
+    {{input type="text" value=model.name}}
+  </div>
+  <div>
+    <label>URL:</label>
+    {{input type="text" value=model.url placeholder="must start with http://"}}
+  </div>
+  <div>
+    <label>Description:</label>
+    {{input type="text" value=model.description}}
+  </div>
+  <div>
+    <label>Why you like it:</label>
+    {{input type="text" value=model.why}}
+  </div>
+  <div>
+    <label>Photo URL</label>
+    {{input type="text" value=model.photo placeholder="must start with http://"}}
+  </div>
+
+  <!-- <div>
+    <label>Body:</label>
+    {{textarea rows="5" value=model.url}}
+  </div> -->
+
+  <div>
+    <button {{action 'save'}}>Save</button>
+    <button {{action 'cancel'}}>Cancel</button>
+  </div>
+</form>
