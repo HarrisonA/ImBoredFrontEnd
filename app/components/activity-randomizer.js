@@ -13,9 +13,13 @@ export default Ember.Component.extend({
       let numOfBars = city.get('bars.length');
       let randomBar = city.get('bars').objectAt(Math.floor(Math.random() * numOfBars));
 
+      let numOfRestaurants = city.get('restaurants.length');
+      let randomRestaurant = city.get('restaurants').objectAt(Math.floor(Math.random() * numOfRestaurants));
       let actArray = [];
       actArray.push(randomPark);
       actArray.push(randomBar);
+      actArray.push(randomRestaurant);
+
 
       let randomElem = Math.floor(Math.random() * actArray.length);
 
