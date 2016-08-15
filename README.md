@@ -12,6 +12,8 @@ You will need the following things properly installed on your computer.
 * [Bower](http://bower.io/)
 * [Ember CLI](http://www.ember-cli.com/)
 * [PhantomJS](http://phantomjs.org/)
+* (Ember 2.x should be installed on your computer)
+
 
 ## Installation
 

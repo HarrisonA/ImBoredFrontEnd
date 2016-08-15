@@ -1,6 +1,8 @@
 {{#link-to 'cities'}}Back to the Cities list{{/link-to}}
 
 <!-- A very quick hack to check display issues: -->
+<!-- inline-block to make all divisions line up side by side
+So each div (category, actvity list) is NOT on its own line -->
 <style media="screen">
   div { display: inline-block;}
 </style>
@@ -8,7 +10,6 @@
 
 
 <h2>THINGS TO DO in the city of {{model.name}}</h2>
-
 <div>
   <h2>{{#link-to 'city.bars'}}Bars ({{model.bars.length}} recommendations)
     <br>
