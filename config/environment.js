@@ -16,7 +16,13 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+
+    EmberENV: {
+      EXTEND_PROTOTYPES: {
+        Date: false,
+      },
+    },
   };
 
   if (environment === 'development') {
