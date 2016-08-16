@@ -17,14 +17,14 @@ Router.map(function () {
 
   this.route('city', { path: 'cities/:city_id' }, function () {
 
+    this.route('bars');
+    this.route('bar.new', { path: 'bars/new' });
+
     this.route('parks');
     this.route('park.new', { path: 'parks/new' });
 
     this.route('families');
     this.route('family.new', { path: 'families/new' });
-
-    this.route('bars');
-    this.route('bar.new', { path: 'bars/new' });
 
     this.route('movies');
     this.route('movie.new', { path: 'movies/new' });
