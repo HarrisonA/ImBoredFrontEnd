@@ -1,8 +1,14 @@
 <h1>List of cities</h1>
 
 <ul>
-  {{#link-to 'random'}}Feeling lucky? Try a random suggestion{{/link-to}} 
+  {{#link-to 'random'}}Feeling lucky? CLICK ME to get a random suggestion{{/link-to}}
+  <br>
+  <br>
+  <br>
+  Click a city below to see its options.
+  <br>
   {{#each model as |city|}}
+    <br>
     <li>
       {{#link-to 'city' city}}  <!-- each city is just the model or id. 'city' is the route name-->
         {{city.name}}
