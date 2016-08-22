@@ -1,6 +1,6 @@
 # Im-bored-front-end
 
-An Ember 2.3 app that shows the user options of things to do in a selected city.  This app uses the rails API that is available in the ImBoredAPI repo.
+An Ember 2.3 app lets the user choose a city, and then it presents a list of activity categories.  After selecting a category, the user is presented with a detailed list of available activities.  This app uses the rails API that is available in the ImBoredAPI repo.
 
 This is a work in progress with many features to come...
 ## Prerequisites
