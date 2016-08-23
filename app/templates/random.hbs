@@ -1,13 +1,9 @@
 {{#link-to 'cities'}}Back to the Cities list{{/link-to}}
 
-<h1>
-  Random suggestions coming soon...
-</h1>
+<br><br>Click a city for a random suggestion...
 
-Click a city...
+<!-- TODO: Models are lost on page refresh.  Fix this. -->
 
-<!-- Use a component as some logic to make a city click randomly dispay an activity
-for that city -->
 <ul>
   {{#each model as |city|}}
     <li>

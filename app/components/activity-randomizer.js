@@ -4,7 +4,7 @@ export default Ember.Component.extend({
   actions: {
     getRandomActivity(city) {
       // TODO: figure out how to get all the activities associated with one city
-      // then you update the MVP code below
+      // then update the MVP code below to be DRY
 
       let numOfParks = city.get('parks.length');
       // note objectAt(1) means get the park[1] object from the list
@@ -15,6 +15,7 @@ export default Ember.Component.extend({
 
       let numOfRestaurants = city.get('restaurants.length');
       let randomRestaurant = city.get('restaurants').objectAt(Math.floor(Math.random() * numOfRestaurants));
+
       let actArray = [];
       actArray.push(randomPark);
       actArray.push(randomBar);
