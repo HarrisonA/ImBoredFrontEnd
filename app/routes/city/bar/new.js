@@ -7,6 +7,8 @@ export default Ember.Route.extend({
 
   // NOTE: Because bar/new is a *subroute* of city,
   // renderTemplate is needed to display city/bar/new.hbs
+  // otherwise, /bar/new route will displayed in the template of
+  // /city *IF* city.hbs uses {{outlet}}
   renderTemplate() {
     this.render('city.bar.new', { into: 'application' });
   },
