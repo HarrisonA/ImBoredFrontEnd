@@ -15,6 +15,8 @@ Router.map(function () {
   this.route('sports');
   this.route('travels');
 
+  this.route('random');
+
   this.route('city', { path: 'cities/:city_id' }, function () {
 
     this.route('bars');
@@ -38,7 +40,6 @@ Router.map(function () {
     this.route('travels');
     this.route('travel.new', { path: 'travels/new' });
   });
-  this.route('random');
 });
 
 export default Router;
