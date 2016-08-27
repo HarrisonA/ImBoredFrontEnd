@@ -41,6 +41,7 @@ Router.map(function () {
     this.route('travel.new', { path: 'travels/new' });
   });
 
+  // Catch any path not listed above
   this.route('notfound', { path: '*path' });
 });
 
