@@ -9,6 +9,12 @@ export default DS.Model.extend({
   restaurants: DS.hasMany('restaurant', { async: true }),
   sports: DS.hasMany('sport', { async: true }),
   travels: DS.hasMany('travel', { async: true }),
+
+  // computed Name string - used in the template
+  // note: this could easily be done in the template with "the city of {{model.name}} rocks!"
+  computedCityNameString: Ember.computed('name', function () {
+    return `The city of ${this.get('name')} rocks!`;
+  }),
 });
 
 // Note: …when async is true, it will fetch the related entities when you
