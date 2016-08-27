@@ -7,84 +7,109 @@ So each div (category, actvity list) is NOT on its own line -->
   div { display: inline-block;}
 </style>
 
+<br>
 
 <h2>THINGS TO DO in the city of {{model.name}}</h2>
 (Click a category to see the list)
 <br>
-<div>
+
+
+<!-- NOTE: activityCategories comes from the city controller and
+is ([parks, movies, bars, etc])-->
+{{#each activityCategories as |act|}}
+  <div>
+    <!-- NOTE:  (concat "city." act) is needed to combine "city" with the activity Ex: city.bars -->
+    <!-- NOTE: model.bars.length is wrong, itshould be something like model.act.length which doesn't work -->
+    <h2>{{#link-to (concat "city." act)}} {{act}} ({{model.bars.length}} recommendations)
+
+      <br>
+      <!-- TODO: Change this to be DIFFRENT for each category.  -->
+      <img src="http://cdn.funcheap.com/wp-content/uploads/2016/02/minna3-680x3981.jpg" alt="bar" style="height:300px; width:300px"/>
+      {{/link-to}}
+    </h2>
+  </div>
+{{/each}}
+
+
+
+<!-- ******** -->
+<!-- Below is the code that was needed before creating the modularized code above -->
+<!-- *********** -->
+
+<!-- <div>
   <h2>{{#link-to 'city.bars'}}Bars ({{model.bars.length}} recommendations)
-    <br>
+    <br> -->
     <!-- TODO: Change this to a static resource  -->
-    <img src="http://cdn.funcheap.com/wp-content/uploads/2016/02/minna3-680x3981.jpg" alt="bar" style="height:300px; width:300px"/>
+    <!-- <img src="http://cdn.funcheap.com/wp-content/uploads/2016/02/minna3-680x3981.jpg" alt="bar" style="height:300px; width:300px"/>
     {{/link-to}}
   </h2>
-</div>
+</div> -->
 
 
 
 
-<div>
+<!-- <div>
   <h2>{{#link-to 'city.movies'}}Movies ({{model.movies.length}} recommendations)
-    <br>
+    <br> -->
     <!-- TODO: Change this to a static resource  -->
-    <img src="http://www.tpevent.com/wp-content/uploads/2015/09/minions-in-movie-theatre.jpg" alt="movie" style="height:300px; width:300px"/>
+    <!-- <img src="http://www.tpevent.com/wp-content/uploads/2015/09/minions-in-movie-theatre.jpg" alt="movie" style="height:300px; width:300px"/>
     {{/link-to}}
   </h2>
-</div>
+</div> -->
 
 
 
 
-<div>
+<!-- <div>
   <h2>{{#link-to 'city.parks'}}Parks ({{model.parks.length}} recommendations)
-    <br>
+    <br> -->
     <!-- TODO: Change this to a static resource  -->
-    <img src="http://wobo.org/wp-content/uploads/2014/09/Zach-photo-at-amphitheater.jpg" alt="park" style="height:300px; width:300px"/>
+    <!-- <img src="http://wobo.org/wp-content/uploads/2014/09/Zach-photo-at-amphitheater.jpg" alt="park" style="height:300px; width:300px"/>
     {{/link-to}}
   </h2>
-</div>
+</div> -->
 
 
 
-<div>
+<!-- <div>
   <h2>{{#link-to 'city.travels'}}Travels ({{model.travels.length}} recommendations)
-    <br>
+    <br> -->
     <!-- TODO: Change this to a static resource  -->
-    <img src="http://img.wallpaperfolder.com/f/52F6566CDDC7/beach-resort-tropical.jpg" alt="park" style="height:300px; width:300px"/>
+    <!-- <img src="http://img.wallpaperfolder.com/f/52F6566CDDC7/beach-resort-tropical.jpg" alt="park" style="height:300px; width:300px"/>
     {{/link-to}}
   </h2>
-</div>
+</div> -->
 
 
 
-<div>
-  <h2>{{#link-to 'city.sports'}}Families ({{model.sports.length}} recommendations)
-    <br>
+<!-- <div>
+  <h2>{{#link-to 'city.families'}}Families ({{model.families.length}} recommendations)
+    <br> -->
     <!-- TODO: Change this to a static resource  -->
-    <img src="http://jockeybeingfamily.com/wp-content/uploads/2015/05/jbf-homepage-bottom-family.jpg" alt="park" style="height:300px; width:300px"/>
+    <!-- <img src="http://jockeybeingfamily.com/wp-content/uploads/2015/05/jbf-homepage-bottom-family.jpg" alt="park" style="height:300px; width:300px"/>
     {{/link-to}}
   </h2>
-</div>
+</div> -->
 
 
 
-<div>
+<!-- <div>
   <h2>{{#link-to 'city.sports'}}Sports ({{model.sports.length}} recommendations)
-    <br>
+    <br> -->
     <!-- TODO: Change this to a static resource  -->
-    <img src="http://i.cdn.turner.com/nba/nba/dam/assets/160215001056-russell-westbrook-2016-nba-all-star-game.1200x672.jpeg" alt="park" style="height:300px; width:300px"/>
+    <!-- <img src="http://i.cdn.turner.com/nba/nba/dam/assets/160215001056-russell-westbrook-2016-nba-all-star-game.1200x672.jpeg" alt="park" style="height:300px; width:300px"/>
     {{/link-to}}
   </h2>
-</div>
+</div> -->
 
 
 
 
-<div>
+<!-- <div>
   <h2>{{#link-to 'city.restaurants'}}Restaurants ({{model.restaurants.length}} recommendations)
-    <br>
+    <br> -->
     <!-- TODO: Change this to a static resource  -->
-    <img src="https://s-media-cache-ak0.pinimg.com/564x/bf/4f/33/bf4f3315634734a1c7cd345f988d5803.jpg" alt="park" style="height:300px; width:300px"/>
+    <!-- <img src="https://s-media-cache-ak0.pinimg.com/564x/bf/4f/33/bf4f3315634734a1c7cd345f988d5803.jpg" alt="park" style="height:300px; width:300px"/>
     {{/link-to}}
   </h2>
-</div>
+</div> -->
