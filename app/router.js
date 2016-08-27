@@ -40,6 +40,8 @@ Router.map(function () {
     this.route('travels');
     this.route('travel.new', { path: 'travels/new' });
   });
+
+  this.route('notfound', { path: '*path' });
 });
 
 export default Router;
