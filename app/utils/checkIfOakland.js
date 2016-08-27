@@ -1,4 +1,4 @@
-// This computed property function if the current city name is "Oakland"
+// This computed property function checks if the current city name is "Oakland"
 import Ember from 'ember';
 
 const { computed } = Ember;
