@@ -1,20 +1,29 @@
 import Ember from 'ember';
 
+// import the computed property function
+import checkIfOakland from '../utils/checkIfOakland';
+
 export default Ember.Component.extend({
+
+  // Call the CP function and set the result (boolean) as the value for "isOakland" key,
+  // NOTE: currentCity.name comes from model that's assigned to the
+  // "currentCity" attr in /routes/random.js
+  isOakland: checkIfOakland('currentCity.name'),
+
   actions: {
-    getRandomActivity(city) {
+    getRandomActivity(currentCity) {
       // TODO: figure out how to get all the activities associated with one city
       // then update the MVP code below to be DRY
 
-      let numOfParks = city.get('parks.length');
+      let numOfParks = currentCity.get('parks.length');
       // note objectAt(1) means get the park[1] object from the list
-      let randomPark = city.get('parks').objectAt(Math.floor(Math.random() * numOfParks));
+      let randomPark = currentCity.get('parks').objectAt(Math.floor(Math.random() * numOfParks));
 
-      let numOfBars = city.get('bars.length');
-      let randomBar = city.get('bars').objectAt(Math.floor(Math.random() * numOfBars));
+      let numOfBars = currentCity.get('bars.length');
+      let randomBar = currentCity.get('bars').objectAt(Math.floor(Math.random() * numOfBars));
 
-      let numOfRests = city.get('restaurants.length');
-      let randomRest = city.get('restaurants').objectAt(Math.floor(Math.random() * numOfRests));
+      let numOfRests = currentCity.get('restaurants.length');
+      let randomRest = currentCity.get('restaurants').objectAt(Math.floor(Math.random() * numOfRests));
 
       let actArray = [];
       actArray.push(randomPark);
@@ -24,7 +33,7 @@ export default Ember.Component.extend({
 
       let randomElem = Math.floor(Math.random() * actArray.length);
 
-      city.set('randomAct', actArray[randomElem]);
+      currentCity.set('randomAct', actArray[randomElem]);
       this.toggleProperty('showActivity');
     },
   },

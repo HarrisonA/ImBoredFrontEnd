@@ -1,7 +1,11 @@
-<h1 {{action "getRandomActivity" city}}>
-  {{city.name}}
+<h1 {{action "getRandomActivity" currentCity}}>
+  {{currentCity.name}}
 </h1>
 
+{{#if isOakland}}  <!-- this value comes from the computed property in "activity-randomizer.js" -->
+  <small>(The developer of this app is from Oakland!!!)</small>
+{{/if}}
+
 {{#if showActivity}}
-  {{activities-list activity=city.randomAct}}
+  {{activities-list activity=currentCity.randomAct}}
 {{/if}}
