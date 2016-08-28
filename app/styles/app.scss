@@ -1,9 +1,15 @@
 body {
 
   $main-color: blue;
+  $default-img-height: 400px;
+  $default-img-width: 400px;
 
   h1 {
     color: $main-color;
   }
 
+  img{
+    height: $default-img-height;
+    width: $default-img-width;
+  }
 }
