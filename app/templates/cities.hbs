@@ -1,26 +1,29 @@
 <div class="container">
-  <div class="jumbotron">
+  <div class="jumbotron splash-img">
 
-    <h1>List of cities</h1>
+    <!-- <h1>List of cities</h1> -->
 
 
-      <h2>{{#link-to 'random'}}Feeling lucky? CLICK ME to get a random suggestion{{/link-to}}</h2>
       <!-- <br>
       <br> -->
-      <br>
-      <h4>
-        Click a city below to see its options.
-      </h4>
-      <br>
-      {{#each model as |city|}}
+      <div class="transp-window">
         <br>
-        <h2>
-          {{#link-to 'city' city}}  <!-- each city is just the model or id. 'city' is the route name-->
-            {{city.name}}
-          {{/link-to}}
-        </h2>
-      {{/each}}
+        <h4>
+          Choose a city.
+        </h4>
+        <br>
+        {{#each model as |city|}}
+          <br>
+          <h2>
+            {{#link-to 'city' city}}  <!-- each city is just the model or id. 'city' is the route name-->
+              {{city.name}}
+            {{/link-to}}
+          </h2>
+        {{/each}}
 
+        <br>
+        <h3>{{#link-to 'random'}}Get some random suggestions...{{/link-to}}</h3>
+      </div>
 
   </div>
 </div>

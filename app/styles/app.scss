@@ -12,4 +12,19 @@ body {
     height: $default-img-height;
     width: $default-img-width;
   }
+
+  .randomAct:hover{
+    color: blue;
+    cursor: pointer;
+  }
+
+  .splash-img{
+    background:url(http://sliptalk.s3-us-west-2.amazonaws.com/wp-content/uploads/2015/07/28182541/SummerStunts-QuadrupleCliffJump.png);
+  }
+
+  .transp-window {
+    background: rgba(255,255,255,.7);
+    padding: 10px;
+  }
+
 }

@@ -1,14 +1,19 @@
-{{#link-to 'cities'}}Back to the Cities list{{/link-to}}
+<div class="container">
+  <div class="jumbotron">
 
-<br><br>Click a city for a random suggestion...
+    {{#link-to 'cities'}}Back to the Cities list{{/link-to}}
 
-<!-- TODO: Models are lost on page refresh.  Fix this. -->
+    <br><br>Click a city for a random suggestion...
 
-<ul>
-  {{#each model as |city|}}
-    <li>
-        {{activity-randomizer currentCity=city}}
-    </li>
-  {{/each}}
+    <!-- TODO: Models are lost on page refresh.  Fix this. -->
 
-</ul>
+
+      {{#each model as |city|}}
+
+            {{activity-randomizer currentCity=city}}
+
+      {{/each}}
+
+    
+  </div>
+</div>
