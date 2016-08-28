@@ -13,9 +13,12 @@ So each div (category, actvity list) is NOT on its own line -->
     <button class="btn btn-default">{{#link-to 'city.bar.new'}}Add a new bar {{/link-to}}</button>
     <br><br>
 
-    {{#each model.bars as |bar|}}
-          {{activities-list activity=bar}}
-    {{/each}}
+    <div class="hack-centered">
+      {{#each model.bars as |bar|}}
+            {{activities-list activity=bar}}
+      {{/each}}
+   </div>
+
     <button class="btn btn-default">{{#link-to 'city.bar.new'}}Add a new bar {{/link-to}}</button>
 
   </div>

@@ -7,13 +7,15 @@
 
     <!-- TODO: Models are lost on page refresh.  Fix this. -->
 
+    <div class="hack-centered">
 
       {{#each model as |city|}}
 
             {{activity-randomizer currentCity=city}}
 
       {{/each}}
+    </div>
 
-    
+
   </div>
 </div>

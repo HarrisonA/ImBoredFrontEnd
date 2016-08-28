@@ -13,6 +13,9 @@ body {
     width: $default-img-width;
   }
 
+  .hack-centered{
+    text-align: center;
+  }
   .randomAct:hover{
     color: blue;
     cursor: pointer;
