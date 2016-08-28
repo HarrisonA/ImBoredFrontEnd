@@ -3,23 +3,24 @@
 
     <h1>List of cities</h1>
 
-    <ul>
-      {{#link-to 'random'}}Feeling lucky? CLICK ME to get a random suggestion{{/link-to}}
+
+      <h2>{{#link-to 'random'}}Feeling lucky? CLICK ME to get a random suggestion{{/link-to}}</h2>
+      <!-- <br>
+      <br> -->
       <br>
-      <br>
-      <br>
-      Click a city below to see its options.
+      <h4>
+        Click a city below to see its options.
+      </h4>
       <br>
       {{#each model as |city|}}
         <br>
-        <li>
+        <h2>
           {{#link-to 'city' city}}  <!-- each city is just the model or id. 'city' is the route name-->
             {{city.name}}
           {{/link-to}}
-
-        </li>
+        </h2>
       {{/each}}
 
-    </ul>
+
   </div>
 </div>

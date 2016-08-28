@@ -1,8 +1,8 @@
 {{#link-to 'city'}}Back to the {{model.name}} activities list{{/link-to}}
 <h1>Bars in {{model.name}}!!!</h1>
-<button>{{#link-to 'city.bar.new'}}Add a new bar {{/link-to}}</button>
+<button class="btn btn-default">{{#link-to 'city.bar.new'}}Add a new bar {{/link-to}}</button>
 <br><br>
 {{#each model.bars as |bar|}}
   {{activities-list activity=bar}}
 {{/each}}
-<button>{{#link-to 'city.bar.new'}}Add a new bar {{/link-to}}</button>
+<button class="btn btn-default">{{#link-to 'city.bar.new'}}Add a new bar {{/link-to}}</button>
