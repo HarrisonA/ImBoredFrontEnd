@@ -13,17 +13,18 @@ test('it renders', function (assert) {
   //this.render(hbs`{{activities-list}}`);
   //assert.equal(this.$().text().trim(), '');
 
-  //  Create a dummy model for the component
+  // Create a dummy model for the component (NOTE: could make this a plain obj
+  // since were not using actions or anything from the compenents js file)
   const dummyActivityObj = Ember.Object.extend({
-      name: "Solas Pub",
-      url: "http://www.madoakbar.com/",
-      description: "Outdoor/Indoor Bar",
-      why: "Chill, lots of space, cool crowd",
-      numofvisits:0,
-      photo:"http://static.wixstatic.com/media/cb3644_5f2ed69191e04daa8ef4feec40d245d1.jpg/v1/fill/w_348,h_463,al_c,q_90/cb3644_5f2ed69191e04daa8ef4feec40d245d1.jpg",
-      notes: "none",
-      hide:false,
-    }).create();
+    name: "Solas Pub",
+    url: "http://www.madoakbar.com/",
+    description: "Outdoor/Indoor Bar",
+    why: "Chill, lots of space, cool crowd",
+    numofvisits: 4,
+    photo:"http://placehold.it/350x150",
+    notes: "none",
+    hide:false,
+  }).create();
 
   this.set('model', dummyActivityObj);
 
@@ -31,21 +32,32 @@ test('it renders', function (assert) {
   this.render(hbs`{{activities-list activity=model}}`);
 
   assert.equal(this.$('strong').text(), "Solas Pub");
+
+  assert.equal(this.$('a').text(), "http://www.madoakbar.com/");
+  assert.equal(this.$('a').attr("href"), "http://www.madoakbar.com/");
+
+  assert.equal(this.$('img').attr("src"), "http://placehold.it/350x150");
+
+  assert.equal(this.$('p:nth-of-type(1)').text(), "About: Outdoor/Indoor Bar");
+  assert.equal(this.$('p:nth-of-type(2)').text(), "Why? Chill, lots of space, cool crowd");
+  assert.equal(this.$('p:nth-of-type(3)').text(), "Visits: 4");
+  assert.equal(this.$('p:nth-of-type(4)').text(), "Notes: none");
+
 });
 
-// Component template
-// <div>
-//   <strong>{{activity.name}}</strong>
-//   <br>
-//   <a href={{activity.url}}>{{activity.url}}</a>
-//   <br>
-//   <img src={{activity.photo}} alt="photo missing">
-//
-//   <p>About: {{activity.description}}</p>
-//
-//   <p>Why? {{activity.why}}</p>
-//
-//   <p>Visits: {{activity.numofvisits}}</p>
-//
-//   <p>Notes: {{activity.notes}}</p>
-// </div>
+/*Component template (for reference)
+<div>
+  <strong>{{activity.name}}</strong>
+  <br>
+  <a href={{activity.url}}>{{activity.url}}</a>
+  <br>
+  <img src={{activity.photo}} alt="photo missing">
+
+  <p>About: {{activity.description}}</p>
+
+  <p>Why? {{activity.why}}</p>
+
+  <p>Visits: {{activity.numofvisits}}</p>
+
+  <p>Notes: {{activity.notes}}</p>
+</div>*/
