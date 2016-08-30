@@ -2,7 +2,7 @@ import { moduleForModel, test } from 'ember-qunit';
 
 moduleForModel('restaurant', 'Unit | Model | restaurant', {
   // Specify the other units that are required for this test.
-  needs: []
+  needs: ['model:city']
 });
 
 test('it exists', function(assert) {
