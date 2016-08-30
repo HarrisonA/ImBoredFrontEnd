@@ -22,11 +22,14 @@ body {
   }
 
   .splash-img{
-    background:url(http://sliptalk.s3-us-west-2.amazonaws.com/wp-content/uploads/2015/07/28182541/SummerStunts-QuadrupleCliffJump.png);
+    // background:url(http://sliptalk.s3-us-west-2.amazonaws.com/wp-content/uploads/2015/07/28182541/SummerStunts-QuadrupleCliffJump.png);
+    // background:url("/assets/images/altEvent.jpg");
+    background:url("http://www.smallstepsbigchanges.com/wp-content/uploads/2014/02/Kids-having-fun-smallstepsbigchanges.com_.jpg");
+    background-size: 100% 100%;
   }
 
   .transp-window {
-    background: rgba(255,255,255,.7);
+    background: rgba(255,255,255,.6);
     padding: 10px;
   }
 
