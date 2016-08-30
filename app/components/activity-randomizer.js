@@ -16,6 +16,7 @@ export default Ember.Component.extend({
       // then update the MVP code below to be DRY
 
       let numOfParks = currentCity.get('parks.length');
+
       // note objectAt(1) means get the park[1] object from the list
       let randomPark = currentCity.get('parks').objectAt(Math.floor(Math.random() * numOfParks));
 
