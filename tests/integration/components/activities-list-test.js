@@ -31,17 +31,17 @@ test('it renders', function (assert) {
   // Template block usage:"
   this.render(hbs`{{activities-list activity=model}}`);
 
-  assert.equal(this.$('strong').text(), "Solas Pub");
+  assert.equal(this.$('strong').text(), "Solas Pub", "Activity 'name' is rendered from model");
 
-  assert.equal(this.$('a').text(), "http://www.madoakbar.com/");
-  assert.equal(this.$('a').attr("href"), "http://www.madoakbar.com/");
+  assert.equal(this.$('a').text(), "http://www.madoakbar.com/", "Activity url text is rendered from model");
+  assert.equal(this.$('a').attr("href"), "http://www.madoakbar.com/", "Activity url is assigned to anchor tag src" );
 
-  assert.equal(this.$('img').attr("src"), "http://placehold.it/350x150");
+  assert.equal(this.$('img').attr("src"), "http://placehold.it/350x150", "Photo url is assigned to image tag src");
 
-  assert.equal(this.$('p:nth-of-type(1)').text(), "About: Outdoor/Indoor Bar");
-  assert.equal(this.$('p:nth-of-type(2)').text(), "Why? Chill, lots of space, cool crowd");
-  assert.equal(this.$('p:nth-of-type(3)').text(), "Visits: 4");
-  assert.equal(this.$('p:nth-of-type(4)').text(), "Notes: none");
+  assert.equal(this.$('p:nth-of-type(1)').text(), "About: Outdoor/Indoor Bar", "Activity 'About''is rendered from model");
+  assert.equal(this.$('p:nth-of-type(2)').text(), "Why? Chill, lots of space, cool crowd", "Activity 'Why' is rendered from model");
+  assert.equal(this.$('p:nth-of-type(3)').text(), "Visits: 4", "Activity 'Visits''is rendered from model");
+  assert.equal(this.$('p:nth-of-type(4)').text(), "Notes: none", "Activity 'Notes' is rendered from model");
 
 });
 
