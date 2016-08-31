@@ -3,6 +3,7 @@ body {
   $main-color: blue;
   $default-img-height: 400px;
   $default-img-width: 400px;
+  $default-text-shadow: 2px 2px 3px black;
 
   h1 {
     color: $main-color;
@@ -31,6 +32,13 @@ body {
   .transp-window {
     background: rgba(255,255,255,.6);
     padding: 10px;
+    a{
+      text-shadow: $default-text-shadow;
+      color:white;
+    }
+    a:hover{
+      color:gold;
+    }
   }
 
 }
