@@ -32,6 +32,7 @@ body {
   .transp-window {
     background: rgba(255,255,255,.6);
     padding: 10px;
+    border-radius: 14px;
     a{
       text-shadow: $default-text-shadow;
       color:white;
@@ -40,5 +41,6 @@ body {
       color:gold;
     }
   }
+
 
 }
