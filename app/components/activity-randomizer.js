@@ -31,7 +31,6 @@ export default Ember.Component.extend({
       actArray.push(randomBar);
       actArray.push(randomRest);
 
-
       let randomElem = Math.floor(Math.random() * actArray.length);
 
       currentCity.set('randomAct', actArray[randomElem]);
